@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'sofia-pro';
+    src: url(../font/Sofia\ Pro\ Medium\ Az.otf);
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .img{
+    background: url('../imgs/fundoAzul.jpg') center; /* URL da imagem */
+    -webkit-background-clip: text; /* Aplica a máscara de texto no navegador Safari/Chrome */
+    background-clip: text; /* Aplica a máscara de texto */
+    color: transparent; /* Torna o texto transparente */
+    font-size: 7rem;
+    animation: txtSs 1s infinite linear;
+    font-family: 'sofia-pro';
+}
+
+@keyframes txtSs {
+        0%{
+            background-image: url('../imgs/fundoAqua.png');
+        }
+        20%{
+            background-image: url('../imgs/fundoVerd.webp');
+
+        }
+        40%{
+            background-image: url('../imgs/fundoLaranja.jpg');
+        }
+        60%{
+            background-image: url('../imgs/fundoAzul.jpg');
+
+        }
+        100%{
+            background-image: url('../imgs/fundopreto.jpg');
+        }
+}
+
+

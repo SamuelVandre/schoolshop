@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School Shop</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
-    <link rel="icon" href="./imgs/logo_sacola.png">
+    <link rel="icon" href="./imgs/logo_sacola-removebg-preview.png">
     <link rel="stylesheet" href="./assets//dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/bootstrap/carousel.rtl.css">
     <link rel="stylesheet" href="./css/main.css">
@@ -51,11 +51,14 @@
         </div>
 
         <div class="procura">
-            <form method="post" action="./src/produtos.php">
+
+            <form method="post" action="#">
                 <input placeholder="O que está buscando?" type="text" name="pesquisaProd">
                 <button type="submit">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
                     </svg>
                 </button>
             </form>
@@ -67,13 +70,13 @@
             <a href="">
                 <p class="mc">Minha Conta</p>
             </a>
-            <a href="">
-                <svg class="seta" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-                </svg>
-            </a>
+            <!-- Parte do botao -->
+            <svg class="seta" id="seta" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                <path
+                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+            </svg>
+            <!-- Fim da parte -->
         </div>
         <div class="icon1">
             <a href=""><svg class="caminhao" xmlns="http://www.w3.org/2000/svg" width="40" height="35"
@@ -121,10 +124,74 @@
                 </div>
             </div>
         </div>
+
+        <div class="seta2" id="seta2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                <path
+                    d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+            </svg>
+        </div>
+
+        <div id="esquecerSenha" class="esquecerSenha">
+            <h4 class="recuperarSenhatxt">Recuperar Senha</h4>
+            <p class="insiratxt">Insira seu E-mail:</p>
+            <form action="#" method="POST">
+                <input class="inputTxt" type="text" placeholder="E-mail">
+                <input class="inputSubmit" type="submit" value="Recuperar">
+            </form>
+
+            <p style="color: blue; cursor: pointer;" id="voltarInicio" class="voltarInicio">Voltar para o login</p>
+        </div>
+
+        <div id="cadastrarConta" class="cadastrarConta">
+            <h4 class="cadTxt">Criar minha conta</h4>
+            <p class="preenchaTxt">Preencha os campos abaixo:</p>
+            <form action="#" method="POST">
+                <input class="name" type="text" placeholder="Nome Completo"><br>
+                <input class="email"type="text" placeholder="E-mail"><br>
+                <input class="senha"type="text" placeholder="Senha"><br>
+                <input class="btn-criarConta" type="submit" value="Criar minha conta">
+            </form>
+            <p style="margin-top: 8%; height: 2%;">Ja tem uma conta?<p id="entreAqui" style="color: blue; cursor: pointer;">Entre aqui</p> </p>
+
+        </div>
+
+        <div class="seta3" id="seta3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                <path
+                    d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+            </svg>
+        </div>
+
+        <div id="entrarConta" class="entrarConta">
+            <h4 class="cadTxt">Entrar em minha conta</h4>
+            <p class="preenchaTxt">Insira seu e-mail e senha:</p>
+            <form action="#" method="POST">
+                <input type="text" placeholder="E-mail"><br>
+                <input type="text" placeholder="Senha"><br>
+                <input type="submit" value="Entrar">
+            </form>
+            <p style="position: absolute; right: 25%; top: 70%;">Novo Cliente?<p id="voltarCadTxt"style=" color: blue;position: absolute; top: 70%;right: -18%;cursor: pointer;">Cadastre-se Aqui</p></p>
+            <p style="position: absolute; top: 80%;">Esqueceu a senha?</p>
+            <p id="recTxt"style="color: blue; position: absolute; top: 90%;cursor: pointer;">Recuperar sua senha</p>
+        </div>
+
+        <div class="seta4" id="seta4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                <path
+                    d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+            </svg>
+        </div>
+
+
     </header>
 
     <main>
-        <div class="carrossel" style="width: 100%; height: auto; display: flex; align-items: center;justify-content: center;">
+        <div class="carrossel"
+            style="width: 100%; height: auto; display: flex; align-items: center;justify-content: center;">
             <div id="myCarousel" style="width: 95%;" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
@@ -134,7 +201,7 @@
                     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"
                         aria-label="Slide 3"></button>
                 </div>
-                <div class="carousel-inner" style="border-radius: 50px;">
+                <div style="border-radius: 50px;"class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="./imgsBody/backpacks-2048px-2x1-0006 (1).jpg" alt=""><!--IMAGEM CAROUSEL-->
                         <div class="container">
@@ -205,6 +272,7 @@
         <div class="produtos">
             <div class="titulo">
                 <h1>Produtos</h1>
+                <hr>
             </div>
             <div class="rowProd">
 
@@ -277,10 +345,19 @@
             </div>
         </div>
 
-
-
-
-
+        <div class="sobreNos">
+            <div class="imagem">
+                <img src="./imgs/logo_fund_branc-removebg-preview.png" alt="">
+            </div>
+            <div class="sobreNosTxt">
+                <h1 style="position: absolute;top: 10%;font-family: 'Poppins_bold';">Sobre a School Shop</h1>
+                <p style="position: absolute;top:20%;">A School Shop é uma loja escola dedicada a fornecer materiais didáticos, uniformes e acessórios para estudantes de todas as idades. Fundada em 2005 por um grupo de educadores visionários, tornou-se um ponto de referência na comunidade educacional, oferecendo produtos de alta qualidade e serviço personalizado. </p>
+                <h2 style="font-size: large; font-family: 'Poppins_bold'; position: absolute;top: 40%;">Produtos Autênticos com Nota Fiscal</h2>
+                <p style="position: absolute;top: 45%;">A School Shop se destaca por sua dedicação à transparência e confiabilidade. Todos os produtos adquiridos na loja vêm acompanhados de nota fiscal, garantindo proteção e segurança aos clientes. Essa prática reforça o compromisso da School Shop com a qualidade e a integridade em cada transação, proporcionando tranquilidade aos pais e estudantes em sua jornada educacional.</p>
+                <h2 style="position: absolute;top: 67%;font-family: 'Poppins_bold'; font-size: large;">Marcas reconhecidas e produtos de qualidade</h2>
+                <p style="position: absolute;top: 72%;">Na School Shop, a qualidade dos produtos escolares é uma prioridade indiscutível. Trabalhamos incansavelmente para oferecer aos nossos clientes apenas o melhor em termos de durabilidade, funcionalidade e estilo. Trabalhamos com marcas reconhecidas mundialmente, como Faber-Castell para materiais de escrita, Tilibra para cadernos e agendas, e Pritt para materiais de colagem. </p>
+            </div>
+        </div>
 
     </main>
 
@@ -361,6 +438,7 @@
 
 
     <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/header.js"></script>
 </body>
 
 </html>

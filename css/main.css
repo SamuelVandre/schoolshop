@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: 'Poppins_bold';
+    src: url(../font/Poppins-SemiBold.ttf);
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    src: url(../font/Poppins-Regular.ttf);
+  }
+
 * {
     padding: 0;
     margin: 0;
@@ -11,10 +23,11 @@ main {
 
 main .rowCards {
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
+
 }
 
 main .rowCards .cards {
@@ -22,36 +35,34 @@ main .rowCards .cards {
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-    width: 20%;
-    height: 50%;
+    width: 50%;
+    height: 90%;
     background-color: transparent;
     padding: 3%;
     border-radius: 100px;
     transition: 1s !important;
 }
 
-main .rowCards .cards:hover {
-    cursor: pointer !important;
-}
-
 main .rowCards .cards .img {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
+    border-radius: 100px;
     transition: 1s !important;
-    background-color: black;
+
+    background-image: url('../imgs/sacola-logo.png');
     background-position: center;
     background-size: cover;
     transition-delay: 0;
 }
 
-main .rowCards .cards:hover .img {
+main .rowCards .cards .img:hover {
     border-radius: 60px !important;
     transition: 1s;
 }
 
 main .produtos {
     width: 100%;
-    height: auto;
+    height: 180vh;
     color: black;
     display: flex;
     flex-direction: column;
@@ -205,4 +216,23 @@ main .produtos .rowProd .prod .txt {
 .stars h3{
     font-size: 13px;
     color: #888;
+}
+
+main .sobreNos .imagem{
+    width: 50%;
+    height: 20vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    left: -2%;
+    top: 310%;
+}
+
+main .sobreNos .sobreNosTxt{
+    position: absolute;
+    width: 52%;
+    height: 160vh;
+    right: 0;
+    font-family: 'Poppins';
 }

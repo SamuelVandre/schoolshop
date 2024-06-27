@@ -6,16 +6,18 @@ let condicao = true
 seta.addEventListener('click', () => {
 
     if (condicao) {
-        cadastrarConta.style.display = 'block'
+        cadastrarConta.style.display = 'block';
         seta.style.transform = 'rotate(360deg)';
         seta3.style.display = 'block';
-        condicao = false
+        cadastrarConta.style.opacity = "1";
+        seta3.style.opacity = "1";
+        condicao = false;
 
     } else {
         seta.style.transform = 'rotate(180deg)';
-        cadastrarConta.style.display = 'none';
-        seta3.style.display = 'none';
-        condicao = true
+        cadastrarConta.style.opacity = "0";
+        seta3.style.opacity = "0";
+        condicao = true;
     }
 
 
@@ -30,45 +32,13 @@ let recTxt= document.getElementById('recTxt');
 let voltarTxt = document.getElementById('voltarInicio');
 let voltarCadTxt = document.getElementById('voltarCadTxt');
 
-
-
 entreAqui.addEventListener('click', ()=>{
-    entrarConta.style.display="block";
-    seta4.style.display="block";
+    entrarConta.style.opacity="1";
+    seta4.style.opacity="1";
+    cadastrarConta.style.opacity="0";
+    seta3.style.opacity="0";
 })
 
-seta.addEventListener('click', ()=>{
-    entrarConta.style.display="none";
-    seta4.style.display="none";
-})
-
-recTxt.addEventListener('click', ()=>{
-    entrarConta.style.display="none";
-    seta4.style.display="none";
-    cadastrarConta.style.display="none";
-    seta3.style.display="none";
-    esqueceuSenha.style.display="block";
-    seta2.style.display="block";
-})
-
-seta.addEventListener('click', ()=>{
-    esqueceuSenha.style.display="none";
-    seta2.style.display="none";
-})
-
-voltarTxt.addEventListener('click', ()=>{
-    esqueceuSenha.style.display="none";
-    seta2.style.display="none";
-    entrarConta.style.display="block";
-    seta4.style.display="block";
-})
-
-voltarCadTxt.addEventListener('click', ()=>{
-    entrarConta.style.display="none";
-    seta4.style.display="none";
-    cadastrarConta.style.display="block";
-    seta3.style.display="block";
-})
 
 
 

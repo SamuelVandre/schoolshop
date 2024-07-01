@@ -383,6 +383,7 @@
 
 
     <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/header.js"></script>
 </body>
 
 </html>

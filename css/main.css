@@ -1,15 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-@font-face {
-    font-family: 'Poppins_bold';
-    src: url(../font/Poppins-SemiBold.ttf);
-  }
-
-  @font-face {
-    font-family: 'Poppins';
-    src: url(../font/Poppins-Regular.ttf);
-  }
-
 * {
     padding: 0;
     margin: 0;
@@ -23,7 +11,7 @@ main {
 
 main .rowCards {
     width: 100%;
-    height: 60vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -35,76 +23,62 @@ main .rowCards .cards {
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-    width: 50%;
-    height: 90%;
+    width: 20%;
+    height: 50%;
     background-color: transparent;
     padding: 3%;
     border-radius: 100px;
     transition: 1s !important;
 }
+main .rowCards .cards:hover{
+    cursor: pointer !important;
+}
 
 main .rowCards .cards .img {
-    width: 220px;
-    height: 220px;
-    border-radius: 100px;
+    width: 200px;
+    height: 200px;
+    border-radius: 1000px;
     transition: 1s !important;
-
-    background-image: url('../imgs/sacola-logo.png');
+    background-image: url('../imgs/sCHOOL.png');
     background-position: center;
     background-size: cover;
     transition-delay: 0;
 }
-
-main .rowCards .cards .img:hover {
+main .rowCards .cards:hover .img{
     border-radius: 60px !important;
     transition: 1s;
 }
 
 main .produtos {
     width: 100%;
-    height: 180vh;
+    height: 150vh;
     color: black;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 main .produtos .titulo {
-    width: 95%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    z-index: 10;
+    width: 100%;
+    display: block;
+    height: 1%;
 }
 
 main .produtos .titulo h1 {
-    font-size: 1.5rem;
-    margin: 0;
-    padding-bottom: 5px;
-}
-
-main .produtos .titulo hr {
-    width: 100%;
-    height: 8px;
-    color: lime;
-    border-radius: 5px;
-}
-
-main .produtos .titulo h2 {
-    font-size: 1.3rem;
-    margin: 0;
-    padding-bottom: 5px;
-    color: lime;
-    cursor: pointer;
+    display: flex;
+    margin: 0 0 3% 3%;
+    width: fit-content;
 }
 
 main .produtos .rowProd {
-    width: 94%;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    height: 16vw;
+    justify-content: space-around;
+    margin: 20px 0;
+    height: 30vh;
 }
 
 a {
@@ -115,8 +89,8 @@ a {
 }
 
 main .produtos .rowProd .prod {
-    width: 30vw;
-    height: 14vw;
+    width: 31%;
+    height: 100%;
     background-color: white;
     box-shadow: 0 0 0px white;
     transition: 1s;
@@ -128,6 +102,7 @@ main .produtos .rowProd .prod {
 
 main .produtos .rowProd .prod:hover {
     margin-bottom: 25px;
+    box-shadow: 4px 4px 10px lime;
 }
 
 main .produtos .rowProd .prod .img {
@@ -135,104 +110,12 @@ main .produtos .rowProd .prod .img {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+}
+
+main .produtos .rowProd .img img{
+    width: 10%;
 }
 
 main .produtos .rowProd .prod .txt {
     width: 40%;
-}
-
-
-.label {
-    font-size: 18px;
-    font-weight: bold;
-    margin-right: 40px; 
-}
-
-.price-container {
-    width: 60%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center ;
-}
-
-.discount {
-    position: absolute;
-    top: 0;
-    left: 15px;
-
-    background-color: #007bff;
-    color: white;
-    font-size: 12px; 
-    border-radius: 5px;
-    padding: 3px 6px; 
-    margin-bottom: 5px; 
-}
-
-.now-price {
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 20px; /* Reduzido o tamanho da fonte */
-    font-weight: bold;
-    color: #000000;
-    margin-bottom: 5px; /* Marrgin do lado do preço */
-}
-
-
-.old-price {
-    font-weight: 500;
-    text-decoration: line-through;
-    color: #888;
-    font-size: 12px; /* Reduzido o tamanho da fonte */
-}
-
-.installments {
-    font-size: 12px; /* Reduzido o tamanho da fonte */
-    color: #333;
-    margin-bottom: 10px; /* Espaço abaixo das parcelas */
-}
-
-.buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Ajusta para alinhar os botões à esquerda */
-}
-
-.desc{
-    font-size: 1rem;
-}
-
-.stars{
-    
-    display: flex;
-    justify-content: center;
-    color: #FFCE00;
-}
-
-.stars h3{
-    font-size: 13px;
-    color: #888;
-}
-
-main .sobreNos .imagem{
-    width: 50%;
-    height: 20vh;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    position: absolute;
-    left: -2%;
-    top: 310%;
-}
-
-main .sobreNos .sobreNosTxt{
-    position: absolute;
-    width: 52%;
-    height: 160vh;
-    right: 0;
-    font-family: 'Poppins';
 }

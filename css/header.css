@@ -1,5 +1,5 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 @font-face {
   font-family: 'Poppins';
@@ -21,7 +21,7 @@
 body {
   padding: 0;
   margin: 0;
-  background-color: rgba(200, 200, 200, 0.3);
+  background-color: rgba(200, 200, 200, 0.2);
 }
 
 header {
@@ -100,8 +100,6 @@ header .cadastro .seta {
   top: 50%;
   left: 35%;
   color: rgb(31, 197, 31);
-  transition: 0.3s linear;
-  transform: rotate(180deg);
 }
 
 header .icon1 {
@@ -183,8 +181,6 @@ header .qtd_prod .zero {
   top: -15%;
 }
 
-
-
 header .contain-header {
   display: flex;
   position: absolute;
@@ -233,270 +229,4 @@ header .menu a {
 
 header .menu a:hover {
   color: #918c8c;
-}
-
-header .seta2 {
-  color: black;
-  position: absolute;
-  top: 19%;
-  right: 392.6px;
-  color: rgb(240, 240, 240);
-  display: flex;
-  opacity: 0;
-  transition: 0.5s ease-in;
-}
-
-header .esquecerSenha {
-  background-color: rgb(240, 240, 240);
-  width: 25%;
-  height: 50vh;
-  position: absolute;
-  top: 21.8%;
-  z-index: 1;
-  color: black;
-  right: 20%;
-  border-radius: 2%;
-  transition: 0.5s ease-in;
-  display: flex;
-  opacity: 0;
-}
-
-header .recuperarSenhatxt {
-  margin-top: 8%;
-  display: block;
-  height: 5vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-header .insiratxt {
-  width: 100%;
-  height: 5vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-header .inputTxt {
-  width: 80%;
-  height: 7vh;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  margin-left: 10%;
-  border-radius: 50px;
-  color: white;
-}
-
-header .inputTxt[type=text] {
-  padding-left: 20px;
-}
-
-header .inputSubmit {
-  width: 80%;
-  margin-top: 5%;
-  background-color: rgb(31, 197, 31);
-  margin-left: 10%;
-  border: none;
-  height: 5vh;
-  color: white;
-  height: 8vh;
-  border-radius: 50px;
-}
-
-header .voltarInicio {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 10vh;
-  margin-top: 4%;
-}
-
-header .cadastrarConta{
-  background-color: rgb(240, 240, 240);
-  width: 25%;
-  height: 75vh;
-  position: absolute;
-  top: 21.8%;
-  z-index: 1;
-  color: black;
-  right: 20%;
-  border-radius: 2%;
-  transition: 0.5s ease-in;  
-  display: flex;
-  opacity:0;
-}
-
-header .seta3{
-  color: black;
-  position: absolute;
-  top: 19%;
-  right: 392.6px;
-  color: rgb(240, 240, 240);
-  transition: 0.5s linear;
-  display: flex;
-  opacity: 0;
-}
-
-header .cadastrarConta h4{
-  margin-top: 8%;
-  display: block;
-  height: 5vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-header .cadastrarConta p{
-  width: 100%;
-  height: 5vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-header .cadastrarConta input[type="text"]{
-  width: 80%;
-  height: 7vh;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  margin-left: 10%;
-  border-radius: 50px;
-  color: white;
-}
-
-header .cadastrarConta input[type=text] {
-  padding-left: 20px;
-}
-
-header .cadastrarConta input[type="submit"]{
-  width: 80%;
-  background-color: rgb(31, 197, 31);
-  margin-left: 10%;
-  border: none;
-  height: 5vh;
-  color: white;
-  height: 8vh;
-  border-radius: 50px;
-}
-
-header .entrarConta{
-  background-color: rgb(240, 240, 240);
-  width: 25%;
-  height: 75vh;
-  position: absolute;
-  top: 21.8%;
-  z-index: 1;
-  color: black;
-  right: 20%;
-  border-radius: 2%;
-  transition: 0.5s ease-in;  
-  display: none;
-  opacity: 0; 
-}
-
-header .seta4{
-  color: black;
-  position: absolute;
-  top: 19%;
-  right: 392.6px;
-  color: rgb(240, 240, 240);
-  transition: 0.7s linear;
-  display: flex;
-  opacity: 0;
-}
-
-header .entrarConta h4{
-  margin-top: 8%;
-  display: block;
-  height: 5vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-header .entrarConta p{
-  width: 100%;
-  height: 5vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-}
-
-header .entrarConta input[type=text]{
-  padding-left: 20px;
-}
-
-header .entrarConta input[type="text"]{
-  width: 80%;
-  height: 7vh;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  margin-left: 10%;
-  border-radius: 50px;
-  color: white;
-}
-
-header .entrarConta input[type="submit"]{
-  width: 80%;
-  background-color: rgb(31, 197, 31);
-  margin-left: 10%;
-  border: none;
-  height: 5vh;
-  color: white;
-  height: 8vh;
-  border-radius: 50px;
-}
-
-header .esquecerSenha #voltarInicio{
-  color: blue;
-  cursor: pointer;
-}
-
-header .cadastrarConta #entreAqui{
-  color: blue;
-  cursor: pointer;
-  z-index: 1;
-}
-
-header .cadastrarConta #jaTemUmaContatxt{
-  margin-top: 8%;
-  height: 2%;
-}
-
-header .entrarConta #novoClientetxt{
-  position: absolute;
-  right: 25%;
-  top: 70%;
-}
-
-header .entrarConta #voltarCadTxt{
-  color: blue;
-  cursor: pointer;
-  position: absolute;
-  right: -18%;
-  top: 70%;
-}
-
-header .entrarConta #esqueceuSenhatxt{
-  position: absolute;
-  top: 80%;
-}
-
-header .entrarConta #recTxt{
-  color: blue;
-  position: absolute;
-  cursor: pointer;
-  top: 90%;
 }

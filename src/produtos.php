@@ -109,8 +109,6 @@ if (count($_POST) > 0) {
                         print "<p>" . $row['produtos'] . "</p>";
                     print "</div>";
                 print "</div>";
-
-
             }
             print "</div>";
             } else {
@@ -127,7 +125,7 @@ if (count($_POST) > 0) {
 
             <script>
                 function detalhe(n){
-                    window.location.replace("./CadastraProd.php?id=" + n)
+                    window.location.replace("./telaProduto.php?id=" + n)
                 }
             </script>
 </body>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 06/06/2024 às 17:25
+-- Tempo de geração: 26/06/2024 às 17:25
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.0.28
 
@@ -26,20 +26,32 @@ SET time_zone = "+00:00";
 --
 -- Estrutura para tabela `todosprodutos`
 --
-
 CREATE TABLE `todosprodutos` (
   `id` int(11) NOT NULL,
   `produtos` varchar(120) NOT NULL,
   `quantidade` int(10) NOT NULL,
-  `valor` decimal(10,2) NOT NULL
+  `valor` decimal(10,2) NOT NULL,
+  `img1` text NOT NULL,
+  `img2` text NOT NULL,
+  `img3` text NOT NULL,
+  `img4` text NOT NULL,
+  `img5` text NOT NULL,
+  `descricao` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Despejando dados para a tabela `todosprodutos`
 --
 
-INSERT INTO `todosprodutos` (`id`, `produtos`, `quantidade`, `valor`) VALUES
-(1, 'Camiseta nike', 10, 13.00);
+INSERT INTO `todosprodutos` (`id`, `produtos`, `quantidade`, `valor`, `img1`, `img2`, `img3`, `img4`, `img5`, `descricao`) VALUES
+(1, 'Camiseta nike', 10, 13.00, '0', '0', '0', '0', '0', ''),
+(2, 'Camiseta Adidas', 10, 13.00, '0', '0', '0', '0', '0', ''),
+(3, 'Camiseta abiaos', 10, 13.00, '0', '0', '0', '0', '0', ''),
+(4, 'Camiseta Legal', 10, 13.00, '0', '0', '0', '0', '0', ''),
+(5, 'Camiseta Divertida', 10, 13.00, '0', '0', '0', '0', '0', ''),
+(6, 'Camiseta Legal e bonita', 10, 13.00, '0', '0', '0', '0', '0', ''),
+(7, 'Blusa de frio', 7, 212.99, 'blusa_de_frio.webp', 'blusa_de_frio_adidas.webp', 'blusa_de_frio_lacoste.webp', 'blusa_de_frio_oakley.webp', 'blusa_de_frio_quick.webp', 'Blusa de frio muito boa'),
+(8, 'Mouse Gamer Profissional do Paulo Muzy', 45, 799999.99, 'mouseLegal.jpg', 'oisajdlkmfdoijdlk.jpg', 'dsaodsadsoijda.jpg', 'mouseGamerReDragon.avif', 'mouseGamer.jpg', 'Mouse Gamer BOM BARATO');
 
 --
 -- Índices para tabelas despejadas
@@ -59,7 +71,7 @@ ALTER TABLE `todosprodutos`
 -- AUTO_INCREMENT de tabela `todosprodutos`
 --
 ALTER TABLE `todosprodutos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

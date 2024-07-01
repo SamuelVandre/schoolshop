@@ -352,8 +352,7 @@
         </div>
 
         <div class="condicoes">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis esse exercitationem dolore?
-                Quibusdam in velit sapiente aspernatur natus error, soluta,
+            <p>Lorem muito legal e divertido e bonito de se ver
             <h3>magnam esse amet architecto cumque doloribus voluptate. Minus, id eius.</h3>
             </p>
         </div>
@@ -384,6 +383,7 @@
 
     <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/header.js"></script>
+    
 </body>
 
 </html>

@@ -74,13 +74,9 @@
                 </svg>
                 <div class="menu">
                     <ul>
-                        <li><a href="#">Início</a></li>
-                        <li><a href="#">Contato</a></li>
-                        <li><a href="#">Cadernos</a></li>
-                        <li><a href="#">Estojos</a></li>
-                        <li><a href="#">Canetas</a></li>
-                        <li><a href="#">Lapiseiras</a></li>
-                        <li><a href="#">Lapis</a></li>
+                    <?php
+                            include("../components/header_nav.php");
+                        ?>
                     </ul>
                 </div>
             </div>

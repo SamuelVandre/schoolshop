@@ -50,7 +50,7 @@
         </div>
 
         <div class="procura">
-            <form method="post" action="./src/produtos.php">
+            <form method="post" action="./produtos.php">
                 <input placeholder="O que está buscando?" type="text" name="pesquisaProd">
                 <button type="submit">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
@@ -129,12 +129,15 @@
                         
                         $nome = "";
                         $imagem = [];
+                        $preco_antigo = "";
+
 
                         $id = $_GET['id'];
                         $query = $conn->query("SELECT * FROM todosprodutos WHERE id='$id'");
                         $i=0;
                         if($query->num_rows > 0) {
                             while($row = $query->fetch_assoc()){
+                                $preco_antigo = $row['valor']*1.11;
                                 $nome = $row['produtos'];
                                 $imagem1 = $row['img1'];
                                 $imagem2 = $row['img2'];
@@ -144,6 +147,8 @@
                                 $desc_prod = $row['descricao'];
                                 $preco = $row['valor'];
                             }
+                            $total_desconto = $preco_antigo-$preco;
+
                         }else{
                             echo "Houve um erro ao buscar imagem do produto";
                         }
@@ -170,7 +175,7 @@
                 <div class="price-wrapper">
                     <div class="label">Preço:</div>
                     <div class="price-container">
-                        <span class="old-price">DE R$ 1.899,99</span>
+                        <span class="old-price">DE R$ <?php print number_format($preco_antigo, 2); ?></span>
                         <div class="price-details">
                             <span class="current-price">R$ <?php print $preco; ?> <span class="discount"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4"/>
@@ -178,15 +183,14 @@
                             
                         </div>
                         <div class="buttons">
-                            <span class="installments">Em até 12x de R$ 177,84</span>
-                            <div class="smaller-button">R$ 210 de desconto</div>
+                            <span class="installments">Em até 12x de R$ <?php print number_format($preco/12, 2); ?></span>
+                            <div class="smaller-button">R$ <?php print number_format($total_desconto, 2); ?> de desconto</div>
                             <div class="pix-button"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15" height="15" viewBox="0,0,256,256">
                                 <g fill="#007bff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M25,0.04688c-2.07504,0 -4.14903,0.7877 -5.72656,2.36523l-16.86133,16.85937c-3.15507,3.15507 -3.15507,8.30001 0,11.45508l16.86133,16.86133c3.15429,3.15429 8.29883,3.15429 11.45312,0l16.86133,-16.85937c3.15507,-3.15507 3.15507,-8.30001 0,-11.45508l-16.85937,-16.86133c-1.57754,-1.57754 -3.65348,-2.36523 -5.72852,-2.36523zM25,2.0332c1.55896,0 3.11899,0.5975 4.31445,1.79297l9.17188,9.17383h-1.41602c-1.59096,0 -3.11702,0.6319 -4.24219,1.75586c0,0.00065 0,0.0013 0,0.00195l-6.76758,6.76758c-0.59371,0.59371 -1.52814,0.5943 -2.12305,0l-6.76758,-6.76758c-1.12365,-1.12484 -2.64928,-1.75781 -4.24023,-1.75781h-1.41797l9.17578,-9.17383c1.19546,-1.19546 2.75354,-1.79297 4.3125,-1.79297zM9.51172,15h3.41797c1.06104,0 2.07782,0.42077 2.82617,1.16992c0,0.00065 0,0.0013 0,0.00195l6.76758,6.76758c1.35909,1.3577 3.59288,1.35829 4.95117,0l6.76758,-6.76758c0.75084,-0.75008 1.76708,-1.17187 2.82812,-1.17187h3.41602l5.6875,5.6875c2.39093,2.39093 2.39093,6.23602 0,8.62695l-5.68555,5.68555h-3.41797c-1.06104,0 -2.07729,-0.42184 -2.82812,-1.17187l-6.76758,-6.76758c-0.67915,-0.67915 -1.57682,-1.01756 -2.47461,-1.01758c-0.89779,-0.00002 -1.79702,0.33873 -2.47656,1.01758l-6.76758,6.76758c0,0.00065 0,0.0013 0,0.00195c-0.74835,0.74911 -1.76513,1.16992 -2.82617,1.16992h-3.41602l-5.6875,-5.6875c-2.39093,-2.39093 -2.39093,-6.23602 0,-8.62695zM25,28.0293c0.38218,0.00007 0.76369,0.14846 1.06055,0.44531l6.76758,6.76758c0,0.00065 0,0.0013 0,0.00195c1.12516,1.12392 2.65123,1.75586 4.24219,1.75586h1.41797l-9.17578,9.17383c-2.38971,2.38971 -6.23529,2.38971 -8.625,0l-9.17383,-9.17383h1.41602c1.59096,0 3.11659,-0.63297 4.24023,-1.75781l6.76758,-6.76758c0.29745,-0.29715 0.68032,-0.44539 1.0625,-0.44531z"></path></g></g>
                                 </svg> Até 5% OFF no PIX</div>
                         </div>
                     </div>
                 </div>
-            
                 <p class="frete">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
                         <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>

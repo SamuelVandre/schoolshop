@@ -1,7 +1,7 @@
 let seta = document.getElementById('seta');
 let cadastrarConta = document.getElementById('cadastrarConta');
 let seta3 = document.getElementById('seta3');
-let condicao = true
+let condicao = true;
 
 seta.addEventListener('click', () => {
 

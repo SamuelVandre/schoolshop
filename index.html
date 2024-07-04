@@ -185,8 +185,7 @@
                 </button>
             </div>
         </div>
-        
-        
+
         <div class="rowCards">
             <div class="cards">
                 <div class="img" onclick="">
@@ -204,40 +203,10 @@
         </div>
 
         <div class="produtos">
-        
             <div class="titulo">
                 <h1>Produtos</h1>
             </div>
-            <?php
-            include("./src/conn.php");
-            $linha = 1;
-            
-            $consulta = "SELECT * FROM todosprodutos WHERE img1!='0'";
-            $busca = $conn->query($consulta);
-            for ($i=0; $i < 3; $i++) { 
-                print "<div class='rowProd'>";
-
-                    while ($row = $busca->fetch_assoc()) {
-                            print "<div class='prod'>";
-                                print "<div class='img' onclick=''>";
-                                    print "<img src='./produtos_user/" . $row['img1'] . "' alt='Img produto'>";
-                                print "</div>";
-                                print "<div class='txt'>";
-                                    print $row['descricao'];
-                                print "</div>";
-                            print "</div>";
-                            $linha++;
-                            if ($linha == 6) {
-                                return;
-                            }
-                    }
-                    if ($linha == 5) {
-                        return;
-                    }
-                print "</div>";
-            }
-            ?>
-            <!-- <div class="rowProd">
+            <div class="rowProd">
 
                 <div class="prod" onclick="window.location.href = './splash.html'">
                     <div class="img">
@@ -259,7 +228,52 @@
                     </div>
                     <div class="txt"></div>
                 </div>
-            </div> -->
+            </div>
+            <div class="rowProd">
+
+                <div class="prod" onclick="window.location.href=''">
+                    <div class="img">
+                        <img src="" id="img4" alt="">
+                    </div>
+                    <div class="txt"></div>
+                </div>
+
+                <div class="prod" onclick="window.location.href=''">
+                    <div class="img">
+                        <img src="" id="img5" alt="">
+                    </div>
+                    <div class="txt"></div>
+                </div>
+
+                <div class="prod" onclick="window.location.href=''">
+                    <div class="img">
+                        <img src="" id="img6" alt="">
+                    </div>
+                    <div class="txt"></div>
+                </div>
+            </div>
+            <div class="rowProd">
+                <div class="prod" onclick="window.location.href=''">
+                    <div class="img">
+                        <img src="" id="img7" alt="">
+                    </div>
+                    <div class="txt"></div>
+                </div>
+
+                <div class="prod" onclick="window.location.href=''">
+                    <div class="img">
+                        <img src="" id="img8" alt="">
+                    </div>
+                    <div class="txt"></div>
+                </div>
+
+                <div class="prod" onclick="window.location.href=''">
+                    <div class="img">
+                        <img src="" id="img9" alt="">
+                    </div>
+                    <div class="txt"></div>
+                </div>
+            </div>
         </div>
 
 
@@ -315,7 +329,8 @@
         </div>
 
         <div class="condicoes">
-            <p>Lorem muito legal e divertido e bonito de se ver
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis esse exercitationem dolore?
+                Quibusdam in velit sapiente aspernatur natus error, soluta,
             <h3>magnam esse amet architecto cumque doloribus voluptate. Minus, id eius.</h3>
             </p>
         </div>
@@ -345,8 +360,6 @@
 
 
     <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/header.js"></script>
-    
 </body>
 
 </html>

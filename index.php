@@ -5,7 +5,6 @@ $inicio = microtime(true);
 <html lang="en">
 
 <head>
-    <!-- asd -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -72,18 +71,14 @@ $inicio = microtime(true);
                 <p class="mc">Minha Conta</p>
             </a>
             <a href="">
-                <svg class="seta" id="seta" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                <svg class="seta" id="seta" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
                 </svg>
             </a>
         </div>
         <div class="icon1">
-            <a href=""><svg class="caminhao" xmlns="http://www.w3.org/2000/svg" width="40" height="35"
-                    fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
-                    <path
-                        d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2" />
+            <a href=""><svg class="caminhao" xmlns="http://www.w3.org/2000/svg" width="40" height="35" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+                    <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2" />
                 </svg></a>
         </div>
         <div class="rastreiotxt">
@@ -92,10 +87,8 @@ $inicio = microtime(true);
             </a>
         </div>
         <div class="icon2">
-            <a href=""><svg class="carrinho" xmlns="http://www.w3.org/2000/svg" width="40" height="30"
-                    fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                    <path
-                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+            <a href=""><svg class="carrinho" xmlns="http://www.w3.org/2000/svg" width="40" height="30" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
                 </svg></a>
             <a href="">
                 <p class="txt_carrinho">Carrinho</p>
@@ -107,16 +100,23 @@ $inicio = microtime(true);
         </div>
         <div class="contain-header">
             <div class="conteudo">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list"
-                    viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
                 </svg>
                 <div class="menu">
                     <ul>
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">Cadernos</a></li>
+                        <li><a href="#">Estojos</a></li>
+                        <li><a href="#">Canetas</a></li>
+                        <li><a href="#">Lapiseiras</a></li>
+                        <li><a href="#">Lápis</a></li>
                         <?php
-                            include("./components/header_nav.php");
-                        ?>
+                        if(true){
+                            print "<li><a  href='./src/CadastraProd.php'>Cadastrar produtos</a></li>";
+                        }
+                    ?>
                     </ul>
                 </div>
             </div>
@@ -127,12 +127,9 @@ $inicio = microtime(true);
         <div class="carrossel" style="width: 100%; height: auto; display: flex; align-items: center;justify-content: center;">
             <div id="myCarousel" style="width: 95%;" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner" style="border-radius: 50px;">
                     <div class="carousel-item active">
@@ -141,22 +138,18 @@ $inicio = microtime(true);
                             <div class="carousel-caption text-start">
                                 <h1 style="text-shadow: 1px 1px 3px black;">Coleção 2023</h1>
                                 <p style="text-shadow: 1px 1px 3px black;">Melhores roupas de 2023</p>
-                                <p><a id="btn_backpak" class="btn btn-lg btn-primary" href="#"
-                                        style="box-shadow: 1px 1px 8px rgba(30, 30, 30, 0.5); background-color: rgb(31, 197, 31); border: 1px solid rgb(31, 197, 31);">Comprar</a>
+                                <p><a id="btn_backpak" class="btn btn-lg btn-primary" href="#" style="box-shadow: 1px 1px 8px rgba(30, 30, 30, 0.5); background-color: rgb(31, 197, 31); border: 1px solid rgb(31, 197, 31);">Comprar</a>
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="./imgsBody/e61e1fc2-f786-4add-808a-0c837d85c2bd_1456x728.jpg"
-                            alt=""><!--IMAGEM CAROUSEL-->
+                        <img src="./imgsBody/e61e1fc2-f786-4add-808a-0c837d85c2bd_1456x728.jpg" alt=""><!--IMAGEM CAROUSEL-->
                         <div class="container">
                             <div class="carousel-caption">
                                 <h1 style="text-shadow: 1px 1px 3px black;">O preferido das crianças</h1>
                                 <p style="text-shadow: 1px 1px 2px black;">Crianças adoram nossos produtos.</p>
-                                <p><a class="btn btn-lg "
-                                        style="box-shadow: 1px 1px 8px rgba(30, 30, 30, 0.5); background-color: rgb(31, 197, 31); color: white;"
-                                        href="#">Ver materiais infantis</a></p>
+                                <p><a class="btn btn-lg " style="box-shadow: 1px 1px 8px rgba(30, 30, 30, 0.5); background-color: rgb(31, 197, 31); color: white;" href="#">Ver materiais infantis</a></p>
                             </div>
                         </div>
                     </div>
@@ -168,9 +161,7 @@ $inicio = microtime(true);
                                 <p style="text-shadow: 1px 1px 3px black;">Nossos materiais tem a melhor qualidade do
                                     mercado e com
                                     garantia de 3 meses</p>
-                                <p><a class="btn btn-lg"
-                                        style="box-shadow: 1px 1px 8px rgba(30, 30, 30, 0.5); background-color: rgb(31, 197, 31); color: white;"
-                                        href="#">Ver materiais</a></p>
+                                <p><a class="btn btn-lg" style="box-shadow: 1px 1px 8px rgba(30, 30, 30, 0.5); background-color: rgb(31, 197, 31); color: white;" href="#">Ver materiais</a></p>
                             </div>
                         </div>
                     </div>
@@ -185,8 +176,8 @@ $inicio = microtime(true);
                 </button>
             </div>
         </div>
-        
-        
+
+
         <div class="rowCards">
             <div class="cards">
                 <div class="img" onclick="">
@@ -204,36 +195,36 @@ $inicio = microtime(true);
         </div>
 
         <div class="produtos">
-        
+
             <div class="titulo">
                 <h1>Produtos</h1>
             </div>
             <?php
             include("./src/conn.php");
             $linha = 1;
-            
+
             $consulta = "SELECT * FROM todosprodutos WHERE img1!='0'";
             $busca = $conn->query($consulta);
-            for ($i=0; $i < 3; $i++) { 
+            for ($i = 0; $i < 3; $i++) {
                 print "<div class='rowProd'>";
 
-                    while ($row = $busca->fetch_assoc()) {
-                            print "<div class='prod'>";
-                                print "<div class='img' onclick=''>";
-                                    print "<img src='./produtos_user/" . $row['img1'] . "' alt='Img produto'>";
-                                print "</div>";
-                                print "<div class='txt'>";
-                                    print $row['descricao'];
-                                print "</div>";
-                            print "</div>";
-                            $linha++;
-                            if ($linha == 6) {
-                                return;
-                            }
-                    }
-                    if ($linha == 5) {
+                while ($row = $busca->fetch_assoc()) {
+                    print "<div class='prod'>";
+                    print "<div class='img' onclick=''>";
+                    print "<img src='./produtos_user/" . $row['img1'] . "' alt='Img produto'>";
+                    print "</div>";
+                    print "<div class='txt'>";
+                    print $row['descricao'];
+                    print "</div>";
+                    print "</div>";
+                    $linha++;
+                    if ($linha == 6) {
                         return;
                     }
+                }
+                if ($linha == 5) {
+                    return;
+                }
                 print "</div>";
             }
             ?>
@@ -299,10 +290,8 @@ $inicio = microtime(true);
             <p>Siga-nos</p>
             <a href="">
                 <div class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                        class="bi bi-instagram" viewBox="0 0 16 16">
-                        <path
-                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
                     </svg>
                 </div>
             </a>
@@ -315,10 +304,8 @@ $inicio = microtime(true);
         </div>
 
         <div class="endereco">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle"
-                viewBox="0 0 16 16">
-                <path
-                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+                <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512" />
             </svg>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur molestiae quaerat voluptates
                 laudantium, laboriosam illo</p>
@@ -340,16 +327,16 @@ $inicio = microtime(true);
 
     <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/header.js"></script>
-    
+
 </body>
 
 </html>
 <?php
-    $fim = microtime(true);
+$fim = microtime(true);
 
-    $tempo_total = ($fim - $inicio) * 1000;
+$tempo_total = ($fim - $inicio) * 1000;
 
-    echo '<script>';
+echo '<script>';
 echo 'console.log("Tempo de execução da página: ' . $tempo_total . ' ms");';
 echo '</script>';
 

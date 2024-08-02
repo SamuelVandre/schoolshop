@@ -19,8 +19,8 @@
 }
 
 body {
-  padding: 0;
-  margin: 0;
+  padding: 0 !important;
+  margin: 0 !important;
   background-color: rgba(200, 200, 200, 0.2);
 }
 
@@ -123,13 +123,16 @@ header .icon1 .caminhao {
 }
 
 header .rastreiotxt {
-  position: absolute;
-  right: 13.2%;
-  width: 13%;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  top: 13.4%;
+  position: absolute !important;
+  right: 13.2% !important;
+  width: 13% !important;
+  justify-content: center !important;
+  align-items: center !important;
+  display: flex !important;
+  top: 13.4% !important;
+}
+header a{
+  text-decoration: none !important;
 }
 
 header .rastreiotxt p {

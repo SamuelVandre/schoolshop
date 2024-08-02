@@ -38,7 +38,7 @@
 </head>
 
 <body class="text-center">
-
+<a href="../index.php">Voltar para o inicio</a>
     <main class="form-signin">
         <form action="#" method="post" enctype="multipart/form-data">
             <img class="mb-4" src="../imgs/logo_remasterizada__2_-removebg-preview.png" alt="" width="300" height="100">

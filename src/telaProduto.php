@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+session_start();
+?>
+<!DOCTYPE html> 
 <html lang="en">
 
 <head>
@@ -15,9 +18,49 @@
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/telaProduto.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
 </head>
 
 <body style="margin: 0; padding: 0;">
+<?php
+    include ("../src/conn.php");
+
+    $sql = $conn->query("SELECT produtos FROM todosprodutos");
+    $produtos = [];
+    $i = 0;
+    print "<script>
+
+
+$( function() {
+    var availableTags = [
+        ";
+    if ($sql) {
+        if ($sql->num_rows > 0) {
+            while ($row = $sql->fetch_assoc()) {
+                $produtos[$i] = $row['produtos'];
+                print "
+    
+'$produtos[$i]',
+
+";
+                $i++;
+            }
+
+        }
+    }
+    print "
+    ''
+];
+$( '#pesquisa' ).autocomplete({
+source: availableTags
+});
+} );
+</script>
+";
+    ?>
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -44,17 +87,19 @@
 
         }
     </style>
-    <header>
+<header>
         <div class="logo">
-            <img src="../imgs/logo_remasterizada (2).png">
+            <img src="../imgs/logo_remasterizada__2_-removebg-preview.png">
         </div>
 
         <div class="procura">
-            <form method="post" action="./produtos.php">
-                <input placeholder="O que está buscando?" type="text" name="pesquisaProd">
+            <form method="post" action="./src/produtos.php">
+                <input placeholder="O que está buscando?" id="pesquisa" type="text" name="pesquisaProd">
                 <button type="submit">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
                     </svg>
                 </button>
             </form>
@@ -69,7 +114,8 @@
             <a href="">
                 <svg class="seta" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                    <path
+                        d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
                 </svg>
             </a>
         </div>
@@ -101,26 +147,35 @@
         </div>
         <div class="contain-header">
             <div class="conteudo">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
                 </svg>
                 <div class="menu">
                     <ul>
                         <?php
-                            include("../components/header_nav.php");
+                        $abas[0] = "Início";
+                        $abas[1] = "Contato";
+                        $abas[2] = "Cadernos";
+                        $abas[3] = "Estojos";
+                        $abas[4] = "Canetas";
+                        $abas[5] = "Lapiseiras";
+                        $abas[6] = "Lápis";
+                        for ($i = 0; $i < 7; $i++) {
+                            print "<li><a href='#'>" . $abas[$i] . "</a></li>";
+                        }
                         ?>
                     </ul>
                 </div>
             </div>
         </div>
     </header>
-
     <main>
         <section class="produto">
             <div class="imagens">
                 <div class="miniImgs">
                     <?php
-                    include("./conn.php");
                     if (count($_GET) > 0) {
                         
                         $nome = "";
@@ -167,7 +222,7 @@
                         <?php
                             print $nome;
                         ?>
-                    </h1>;
+                    </h1>
                 <div class="price-wrapper">
                     <div class="label">Preço:</div>
                     <div class="price-container">
@@ -176,7 +231,6 @@
                             <span class="current-price">R$ <?php print $preco; ?> <span class="discount"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4"/>
                               </svg> 11%</span></span>
-                            
                         </div>
                         <div class="buttons">
                             <span class="installments">Em até 12x de R$ <?php print number_format($preco/12, 2); ?></span>
@@ -219,7 +273,7 @@
                 <form id="reviewForm">
                     <input type="text" id="username" placeholder="Seu nome" required>
                     <textarea id="userReview" placeholder="Escreva sua avaliação..." rows="4" required></textarea>
-                
+
                     <button type="submit">Enviar Avaliação</button>
                 </form>
             </section>

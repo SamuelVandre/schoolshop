@@ -14,3 +14,5 @@ Lapiseiras
 Lapis
 
 ### é possivel fazer um array para receber o nome/titulo que está anotado em cima para gerar a partir de um for e melhorar a visao e eficiencia do html, diminuindo a quantidade de linha e deixando o site mais leve
+
+#git config --global --add safe.directory D:/2Info/DDM/schoolShop_SS

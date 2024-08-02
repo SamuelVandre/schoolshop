@@ -1,4 +1,5 @@
 <?php
+session_start();
 $inicio = microtime(true);
 ?>
 <!DOCTYPE html>
@@ -11,16 +12,49 @@ $inicio = microtime(true);
     <title>School Shop</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
     <link rel="icon" href="./imgs/logo_sacola.png">
-    <link rel="stylesheet" href="./assets//dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/bootstrap/carousel.rtl.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/bootstrap/carousel.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
 </head>
 
 <body style="margin: 0; padding: 0;">
 
+    <?php
+    include ("./src/conn.php");
+
+    $sql = $conn->query("SELECT produtos FROM todosprodutos");
+    $produtos = [];
+    $i = 0;
+    print "<script>
+$( function() {
+    var availableTags = [
+        ";
+    if ($sql) {
+        if ($sql->num_rows > 0) {
+            while ($row = $sql->fetch_assoc()) {
+                $produtos[$i] = $row['produtos'];
+                print "'$produtos[$i]',";
+                $i++;
+            }
+
+        }
+    }
+    print " ''
+];
+$( '#pesquisa' ).autocomplete({
+source: availableTags
+});
+});
+</script>
+";
+    ?>
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -44,21 +78,21 @@ $inicio = microtime(true);
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
             }
-
         }
     </style>
-
     <header>
         <div class="logo">
-            <img src="./imgs/logo_remasterizada (2).png">
+            <img src="./imgs/logo_remasterizada__2_-removebg-preview.png">
         </div>
 
         <div class="procura">
             <form method="post" action="./src/produtos.php">
-                <input placeholder="O que está buscando?" type="text" name="pesquisaProd">
+                <input placeholder="O que está buscando?" id="pesquisa" type="text" name="pesquisaProd">
                 <button type="submit">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
                     </svg>
                 </button>
             </form>
@@ -71,7 +105,7 @@ $inicio = microtime(true);
                 <p class="mc">Minha Conta</p>
             </a>
             <a href="">
-                <svg class="seta" id="seta" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                <svg class="seta" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                     <path
                         d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
@@ -114,7 +148,16 @@ $inicio = microtime(true);
                 <div class="menu">
                     <ul>
                         <?php
-                            include("./components/header_nav.php");
+                        $abas[0] = "Início";
+                        $abas[1] = "Contato";
+                        $abas[2] = "Cadernos";
+                        $abas[3] = "Estojos";
+                        $abas[4] = "Canetas";
+                        $abas[5] = "Lapiseiras";
+                        $abas[6] = "Lápis";
+                        for ($i = 0; $i < 7; $i++) {
+                            print "<li><a href='#'>" . $abas[$i] . "</a></li>";
+                        }
                         ?>
                     </ul>
                 </div>
@@ -123,7 +166,8 @@ $inicio = microtime(true);
     </header>
 
     <main>
-        <div class="carrossel" style="width: 100%; height: auto; display: flex; align-items: center;justify-content: center;">
+        <div class="carrossel"
+            style="width: 100%; height: auto; display: flex; align-items: center;justify-content: center;">
             <div id="myCarousel" style="width: 95%;" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
@@ -184,8 +228,8 @@ $inicio = microtime(true);
                 </button>
             </div>
         </div>
-        
-        
+
+
         <div class="rowCards">
             <div class="cards">
                 <div class="img" onclick="">
@@ -203,36 +247,35 @@ $inicio = microtime(true);
         </div>
 
         <div class="produtos">
-        
+
             <div class="titulo">
                 <h1>Produtos</h1>
             </div>
             <?php
-            include("./src/conn.php");
             $linha = 1;
-            
+
             $consulta = "SELECT * FROM todosprodutos WHERE img1!='0'";
             $busca = $conn->query($consulta);
-            for ($i=0; $i < 3; $i++) { 
+            for ($i = 0; $i < 3; $i++) {
                 print "<div class='rowProd'>";
 
-                    while ($row = $busca->fetch_assoc()) {
-                            print "<div class='prod'>";
-                                print "<div class='img' onclick=''>";
-                                    print "<img src='./produtos_user/" . $row['img1'] . "' alt='Img produto'>";
-                                print "</div>";
-                                print "<div class='txt'>";
-                                    print $row['descricao'];
-                                print "</div>";
-                            print "</div>";
-                            $linha++;
-                            if ($linha == 6) {
-                                return;
-                            }
-                    }
-                    if ($linha == 5) {
+                while ($row = $busca->fetch_assoc()) {
+                    print "<div class='prod'>";
+                    print "<div class='img' onclick=''>";
+                    print "<img src='./produtos_user/" . $row['img1'] . "' alt='Img produto'>";
+                    print "</div>";
+                    print "<div class='txt'>";
+                    print $row['descricao'];
+                    print "</div>";
+                    print "</div>";
+                    $linha++;
+                    if ($linha == 6) {
                         return;
                     }
+                }
+                if ($linha == 5) {
+                    return;
+                }
                 print "</div>";
             }
             ?>
@@ -339,16 +382,18 @@ $inicio = microtime(true);
 
     <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/header.js"></script>
-    
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+
 </body>
 
 </html>
 <?php
-    $fim = microtime(true);
+$fim = microtime(true);
 
-    $tempo_total = ($fim - $inicio) * 1000;
+$tempo_total = ($fim - $inicio) * 1000;
 
-    echo '<script>';
+echo '<script>';
 echo 'console.log("Tempo de execução da página: ' . $tempo_total . ' ms");';
 echo '</script>';
 

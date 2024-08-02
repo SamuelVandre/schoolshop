@@ -84,6 +84,7 @@
             <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
             <p class="mt-5 mb-3 text-muted"></p>
         </form>
+        <a href="../index.php">Voltar ao inicio</a>
     </main>
     <?php
     include("./conn.php");
@@ -137,7 +138,7 @@
                         
                         if ($inserir_dados) {
                             echo "
-                                <script>alert('Upload no banco realizado com sucesso.')</script>
+                                <script>alert('Upload realizado com sucesso.')</script>
                             ";
                         } else {
                             echo "<br>Erro ao inserir no banco de dados: " . $conn->error;

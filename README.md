@@ -15,8 +15,6 @@ Lapis
 
 ### é possivel fazer um array para receber o nome/titulo que está anotado em cima para gerar a partir de um for e melhorar a visao e eficiencia do html, diminuindo a quantidade de linha e deixando o site mais leve
 
-<<<<<<< HEAD
 #git config --global --add safe.directory D:/2Info/DDM/schoolShop_SS
-=======
-# Pesquisar como fazer um merge das branchs
->>>>>>> 4bce71a65d74a5c1d7d0b004fffaeff9e76cc996
+
+#slick - biblioteca de frontend

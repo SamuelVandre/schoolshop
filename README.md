@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # schoolShop_SS
 # Projeto feito na nossa escola cursando o 2° ano do ensino tecnico da Etec Professor Jadyr Salles enquanto cursamos o Ensino médio
 #Caso necessário precisa convidar o usuário para poder alterar o diretório, pois, pode dar acesso negado.
@@ -18,3 +19,7 @@ Lapis
 #git config --global --add safe.directory D:/2Info/DDM/schoolShop_SS
 
 #slick - biblioteca de frontend
+=======
+# schoolshop
+Um ecommerce feito durante as aulas na Etec feito em grupo
+>>>>>>> 5da9324c7601b79fce93b282c5fc8d9a1fc6c991

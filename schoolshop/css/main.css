@@ -1,0 +1,293 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    height: auto;
+    width: 100%;
+}
+
+main .rowCards {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+main .rowCards .cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 50%;
+    height: 90%;
+    background-color: transparent;
+    padding: 3%;
+    border-radius: 100px;
+    transition: 1s !important;
+}
+
+main .rowCards .cards .img {
+    width: 220px;
+    height: 220px;
+    border-radius: 100px;
+    transition: 1s !important;
+
+    background-image: url(../imgs/logo_faber.png);
+    background-position: center;
+    background-size: cover;
+    transition-delay: 0;
+}
+
+main .rowCards .cards .img:hover {
+    border-radius: 60px !important;
+    transition: 1s;
+}
+
+main .produtos {
+    width: 100%;
+    height: auto;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+main .produtos .titulo {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+main .produtos .titulo h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+main .produtos .titulo hr {
+    width: 100%;
+    height: 8px;
+    color: lime;
+    border-radius: 5px;
+}
+
+main .produtos .titulo h2 {
+    font-size: 1.3rem;
+    margin: 0;
+    padding-bottom: 5px;
+    color: lime;
+    cursor: pointer;
+}
+
+main .produtos .rowProd {
+    width: 94%;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-around !important;
+    flex-wrap: wrap !important;
+    height: 16vw;
+}
+
+a {
+    width: fit-content;
+    display: flex;
+    color: black;
+    text-decoration: none;
+}
+
+main .rowProd .prod {
+    border: solid 1px black;
+    width: 30vw;
+    height: 14vw;
+    background-color: white;
+    box-shadow: 0 0 0px white;
+    transition: 1s;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main  .rowProd .prod:hover {
+    margin-bottom: 25px;
+    transform: translateY(-12px);
+}
+
+main  .rowProd .prod .img {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+main .rowProd .prod .txt {
+    width: 40%;
+}
+
+
+.label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 40px; 
+}
+
+.price-container {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center ;
+}
+
+.discount {
+    position: absolute;
+    top: 0;
+    left: 15px;
+
+    background-color: #007bff;
+    color: white;
+    font-size: 12px; 
+    border-radius: 5px;
+    padding: 3px 6px; 
+    margin-bottom: 5px; 
+}
+
+.now-price {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    font-size: 20px; /* Reduzido o tamanho da fonte */
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 5px; /* Marrgin do lado do preço */
+}
+
+.old-price {
+    margin-left: 10px;
+    font-weight: 500;
+    text-decoration: line-through;
+    color: #888;
+    font-size: 12px; /* Reduzido o tamanho da fonte */
+}
+
+.installments {
+    font-size: 12px; /* Reduzido o tamanho da fonte */
+    color: #333;
+    margin-bottom: 10px; /* Espaço abaixo das parcelas */
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ajusta para alinhar os botões à esquerda */
+}
+
+.desc{
+    font-size: 1rem;
+}
+
+.stars{
+    display: flex;
+    justify-content: center;
+    color: #FFCE00;
+}
+
+.stars h3{
+    font-size: 16px;
+    color: #888;
+}
+
+main .sobreNos {
+    margin: 10%;
+    display: flex;
+    padding: 20px;
+    min-height: 50vh;
+    
+}
+
+main .imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10%; /* Espaço entre a imagem e o texto */
+}
+
+main .imagem img {
+    max-width: 120%;
+    height: auto;
+    border-radius: 8px; /* Bordas arredondadas da imagem */
+}
+
+main .sobreNosTxt {
+    flex: 2;
+    color: #333; /* Cor do texto */
+}
+
+main .sobreNosTxt h1, .sobreNosTxt h2 {
+    font-weight: bold;
+    color: #0056b3; /* Cor dos títulos */
+}
+
+main .sobreNosTxt h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+main .sobreNosTxt h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+main .sobreNosTxt p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.container_seguranca {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 80%; 
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container_seguranca .item {
+    width: calc(25% - 20px); 
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.container_seguranca .item svg {
+    width: 24px; 
+    height: 24px;
+    margin-bottom: 10px;
+}
+
+.container_seguranca .item h2 {
+    font-size: 14px; 
+    margin: 5px 0;
+}
+
+.container_seguranca .item p {
+    font-size: 12px; 
+    color: #888;
+    margin: 0;
+}

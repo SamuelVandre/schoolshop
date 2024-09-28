@@ -1,0 +1,30 @@
+table{
+    width: 100%;
+    height: 80vh;
+}
+
+table tr{
+    width: 100%;
+    height: 30px;
+}
+
+td{
+    border: 1px solid black ;
+    padding: 5px;
+}
+
+table tr td.celulas_nome{
+    width: 15%;
+}
+
+table tr td.celulas_email{
+    width: 30%;
+}
+
+table tr td.celulas_mensagens{
+    width: 50% !important;
+}
+
+table tr td.celulas_deletar{
+    width: 5%;
+}

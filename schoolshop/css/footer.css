@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('../font/Poppins-Regular.ttf');
+}
+
+footer {
+    font-family: 'poppins';
+    width: 100%;
+    background-color: rgb(31, 197, 31);
+    padding: 20px;
+    border-top: solid 10px rgb(69, 57, 235);
+}
+
+footer .conteudo1 {
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .conteudo1 .atendimento,
+footer .conteudo1 .menuFinal,
+footer .conteudo1 .instagram,
+footer .conteudo1 .pagamento {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+footer .conteudo1 .atendimento p,
+footer .conteudo1 .menuFinal p,
+footer .instagram p,
+footer .condicoes,
+footer .endereco p,
+footer .pagamento p {
+    color: #fff;
+    font-size: 16px; /* Mantém o tamanho original */
+    margin-bottom: 20px;
+}
+
+footer .conteudo1 .atendimento h2,
+footer .conteudo1 .menuFinal h1,
+footer .conteudo1 .atendimento h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 20px; /* Mantém o tamanho original */
+}
+
+
+
+footer .conteudo1 .menuFinal a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    margin-bottom: 10px;
+}
+
+footer .conteudo1 .instagram .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgb(97, 205, 97);
+    color: #fff;
+    margin-top: 10px;
+    transition: background-color 0.4s ease;
+}
+
+footer .conteudo1 .instagram .icon:hover {
+    background-color: rgb(187, 53, 53);
+}
+
+footer .condicoes {
+    color: #fff;
+    text-align: center;
+    margin: 20px 0;
+}
+
+footer .endereco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin: 20px 0;
+}
+
+footer .endereco p {
+    margin-left: 10px;
+}
+
+footer .final {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+footer .pagamento img {
+    margin-top: 10px;
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+}
+
+footer .final .selos img {
+    width: 95px;
+    height: 50px;
+}
+
+@media (max-width: 768px) {
+    footer .conteudo1 {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    footer .conteudo1 .atendimento,
+    footer .conteudo1 .menuFinal,
+    footer .conteudo1 .instagram,
+    footer .conteudo1 .pagamento {
+        margin: 10px 0;
+        text-align: center;
+    }
+    
+    footer .pagamento img {
+        width: 50%;
+        
+    }
+
+    footer .final {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .final .selos img {
+        margin-top: 10px;
+    }
+}
